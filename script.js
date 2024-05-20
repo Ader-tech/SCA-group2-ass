@@ -11,6 +11,7 @@ const getData = async() => {
     
         data.data.map((gif) => {
             const gifElement = document.createElement("img")
+            gifElement.classList.add("single-gif");
             gifElement.src = gif.images.fixed_height.url;
             gifElement.alt = gif.title
             gifGrid.appendChild(gifElement)

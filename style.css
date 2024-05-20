@@ -19,8 +19,22 @@ h1 {
 
 .gif-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    grid-template-rows: repeat(auto-fill, minmax(150px, auto)); 
+} 
+
+.single-gif:nth-child(3n+1) {
+    height: 150px;
+}
+
+.single-gif:nth-child(3n+2) {
+    height: 300px;
+    grid-row-start: span 2
+}
+
+.single-gif:nth-child(3n) {
+    height: 150px;
 }
 
 .gif-content img {
